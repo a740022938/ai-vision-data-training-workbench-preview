@@ -1,0 +1,22 @@
+﻿{
+  "ui": {
+    "alpha": 0.96,
+    "language": "zh_CN"
+  },
+  "behavior": {
+    "auto_save": true,
+    "auto_save_on_navigate": true
+  },
+  "inference": {
+    "auto_infer_on_open": false,
+    "enable_openclaw": true
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 16,
+    "imgsz": 640,
+    "device": "0",
+    "project": "runs/train",
+    "name": "exp"
+  }
+}

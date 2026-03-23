@@ -1,0 +1,21 @@
+【config_manager.py 说明书】
+
+一、这个文件干什么
+专门负责读取、保存、校验 config.json。
+
+二、它应该包含的功能
+1. load_config()
+2. save_config()
+3. validate_config()
+4. merge_default_config()
+
+三、为什么单独拆出来
+因为配置会在很多地方用到：
+- 主界面
+- 设置窗口
+- YOLO 推理
+- 数据输出
+如果每个地方都自己读 JSON，会很乱。
+
+四、注意事项
+以后读取配置，尽量都通过 config_manager.py，不要到处 open(config.json)。
