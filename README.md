@@ -84,44 +84,86 @@ Language configuration page preview showing the bilingual direction of the proje
 ## Quick Start
 ## 快速开始
 
-### For most users / 普通用户
+> **Recommended for most users:** download the preview zip package and start with the packaged UI first. Manual setup is mainly for advanced users who want to reproduce the environment or modify the workflow.
+>
+> **建议大多数用户优先下载预览版 zip 压缩包并直接体验打包好的 UI。**手动安装方式主要面向希望复现环境或自行修改工作流的进阶用户。
 
-1. Download the attached preview package
-2. Extract it to a local folder
-3. Run the launcher or start the main program
-4. Open Settings and confirm your local paths
-5. Load an image and preview the current UI workflow
+---
 
-1. 下载附带的预览版压缩包
-2. 解压到本地目录
-3. 运行启动器或主程序
-4. 打开设置页并确认本地路径
-5. 加载图片并预览当前 UI 工作流
+### Route A: For most users / 路线 A：普通用户
 
-### For advanced users / 进阶用户
+**Quick steps:**
 
-1. Prepare Python and Conda or Miniconda
-2. Create and activate a Python environment
-3. Install Ultralytics for YOLO26 support
-4. Install project dependencies
-5. Run the project manually
+1. Download the preview zip package.
+2. Extract it to a local folder.
+3. Run the launcher or start the packaged UI.
+4. Open Settings and confirm your local paths.
+5. Load an image and preview the current workflow.
 
-1. 准备 Python 与 Conda 或 Miniconda
-2. 创建并激活 Python 虚拟环境
-3. 安装 Ultralytics 以支持 YOLO26
-4. 安装项目依赖
-5. 手动运行项目
+**快速步骤：**
 
-Example commands:
+1. 下载预览版 zip 压缩包。
+2. 解压到本地目录。
+3. 运行启动器或直接打开打包好的 UI。
+4. 打开设置页并确认本地路径。
+5. 加载图片并预览当前工作流。
+
+---
+
+### Route B: For advanced users / 路线 B：进阶用户
+
+**Prerequisites:** Python 3.10, Conda or Miniconda
+
+**Step-by-step:**
+
+1. Prepare Python and Conda or Miniconda.
+2. Create and activate a Python environment.
+3. Install Ultralytics for YOLO26 support.
+4. Install project dependencies (including GUI libraries).
+5. Run the project manually.
+
+**前置条件：** Python 3.10、Conda 或 Miniconda
+
+**分步安装：**
+
+1. 准备 Python 与 Conda 或 Miniconda。
+2. 创建并激活 Python 虚拟环境。
+3. 安装 Ultralytics 以支持 YOLO26。
+4. 安装项目依赖（包含 GUI 库）。
+5. 手动运行项目。
+
+**Example commands / 命令示例：**
 
 ```bash
+# Create and activate environment / 创建并激活环境
 conda create -n ai_workbench python=3.10 -y
 conda activate ai_workbench
+
+# Upgrade pip / 升级 pip
 python -m pip install --upgrade pip
+
+# Install YOLO26 support / 安装 YOLO26 支持
 pip install ultralytics
+
+# Install dependencies / 安装依赖
 pip install -r requirements.txt
+
+# Note: If you encounter GUI display issues, you may need to install Tkinter separately.
+# 注意：如果遇到 GUI 显示问题，可能需要单独安装 Tkinter。
+
+# Run the project / 运行项目
 python main.py
 ```
+
+**GUI Dependency Note / GUI 依赖说明：**
+
+- PyQt5 (included in requirements.txt)
+- OpenCV (cv2)
+- Tkinter (usually bundled with Python; install separately if missing)
+
+- PyQt5（已包含在 requirements.txt 中）
+- OpenCV（cv2）
+- Tkinter（通常随 Python 捆绑；如缺失需单独安装）
 
 ---
 
