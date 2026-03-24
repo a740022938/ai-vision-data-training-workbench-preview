@@ -166,20 +166,26 @@ If your environment does not include it, please install the Tkinter component fo
 ## Recommended Environment / 推荐环境
 
 - OS: Windows 10 / Windows 11
-- Python: 3.10
+- Python: 3.10 recommended
 - Conda / Miniconda (recommended env name: ai_workbench or yolo)
 - Core Dependencies:
-  - Ultralytics (for YOLO26)
-  - OpenCV (image processing)
-  - Tkinter (GUI framework, usually bundled with Python)
+  - Ultralytics (for YOLO26 workflow)
+  - OpenCV (for image processing)
+  - Tkinter (for desktop GUI, usually bundled with Python)
+- Hardware:
+  - NVIDIA GPU recommended
+  - CPU preview still possible
 
 - 操作系统: Windows 10 / Windows 11
-- Python: 3.10
+- Python: 3.10（推荐）
 - Conda / Miniconda（推荐环境名: ai_workbench 或 yolo）
 - 核心依赖:
-  - Ultralytics（用于 YOLO26）
-  - OpenCV（图像处理）
-  - Tkinter（GUI 框架，通常随 Python 捆绑）
+  - Ultralytics（用于 YOLO26 工作流）
+  - OpenCV（用于图像处理）
+  - Tkinter（用于桌面 GUI，通常随 Python 捆绑）
+- 硬件:
+  - 推荐使用 NVIDIA GPU
+  - CPU 模式仍可预览
 
 ---
 
