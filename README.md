@@ -9,8 +9,7 @@ This release is a display-enhanced preview version. It is designed to make the p
 
 ---
 
-## What's New in v0.2.0-preview
-## v0.2.0-preview 更新重点
+## What's New in v0.2.0-preview / 更新重点
 
 - Improved release presentation with clearer bilingual structure
 - Added UI preview screenshots for the current workbench interface
@@ -28,8 +27,7 @@ This release is a display-enhanced preview version. It is designed to make the p
 
 ---
 
-## UI Preview
-## 界面预览
+## UI Preview / 界面预览
 
 ### 01 - Main UI / 主界面
 ![Main UI](assets/screenshots/01_main_ui.png)
@@ -58,8 +56,7 @@ Language configuration page preview showing the bilingual direction of the proje
 
 ---
 
-## Current Highlights
-## 当前亮点
+## Current Highlights / 当前亮点
 
 - Local-first UI workbench preview
 - Configurable local project paths
@@ -81,8 +78,7 @@ Language configuration page preview showing the bilingual direction of the proje
 
 ---
 
-## Quick Start
-## 快速开始
+## Quick Start / 快速开始
 
 > **Recommended for most users:** download the preview zip package and start with the packaged UI first. Manual setup is mainly for advanced users who want to reproduce the environment or modify the workflow.
 >
@@ -157,39 +153,37 @@ python main.py
 
 **GUI Dependency Note / GUI 依赖说明：**
 
-- PyQt5 (included in requirements.txt)
-- OpenCV (cv2)
-- Tkinter (usually bundled with Python; install separately if missing)
+This project currently uses a Tkinter-based desktop GUI.
+Most standard Python installations already include Tkinter.
+If your environment does not include it, please install the Tkinter component for your current Python distribution before running the UI.
 
-- PyQt5（已包含在 requirements.txt 中）
-- OpenCV（cv2）
-- Tkinter（通常随 Python 捆绑；如缺失需单独安装）
+本项目当前使用基于 Tkinter 的桌面 GUI。
+大多数标准 Python 安装通常已自带 Tkinter。
+如果你的环境缺少 Tkinter，请先为当前 Python 发行版补装对应的 Tkinter 组件，再运行图形界面。
 
 ---
 
-## Recommended Environment
-## 推荐环境
+## Recommended Environment / 推荐环境
 
 - OS: Windows 10 / Windows 11
 - Python: 3.10
 - Conda / Miniconda (recommended env name: ai_workbench or yolo)
-- Dependencies:
-  - PyQt5
+- Core Dependencies:
   - Ultralytics (for YOLO26)
-  - OpenCV
+  - OpenCV (image processing)
+  - Tkinter (GUI framework, usually bundled with Python)
 
 - 操作系统: Windows 10 / Windows 11
 - Python: 3.10
 - Conda / Miniconda（推荐环境名: ai_workbench 或 yolo）
-- 依赖:
-  - PyQt5
+- 核心依赖:
   - Ultralytics（用于 YOLO26）
-  - OpenCV
+  - OpenCV（图像处理）
+  - Tkinter（GUI 框架，通常随 Python 捆绑）
 
 ---
 
-## Not Fully Included Yet
-## 暂未完整开放
+## Not Fully Included Yet / 当前尚未完全开放
 
 This is a preview release. The following features are planned but not yet fully implemented:
 - Real training execution pipeline
@@ -209,8 +203,7 @@ This is a preview release. The following features are planned but not yet fully 
 
 ---
 
-## Next Steps
-## 下一步路线
+## Next Steps / 下一步计划
 
 1. Stabilize editor workflow
 2. Improve training integration
