@@ -1,175 +1,168 @@
-# AI Vision Data and Training Workbench Preview v0.3.0
-# AI视觉数据与训练工作台 预览版 v0.3.0
+# AI Workbench v0.3.0 Preview
 
-A local-first Windows workbench preview for visual dataset review, annotation workflow exploration, and model-assisted image workflow presentation.
-一个面向 Windows 的本地优先工作台预览版，用于视觉数据检查、标注工作流探索，以及模型辅助图像工作流展示。
+## 中文
 
-> **Status / 当前状态**
->
-> This is a preview release focused on usability, structure, and release packaging polish. It is intended for evaluation, testing, and iterative feedback.
->
-> 这是一个以可用性、结构化界面和发布打磨为重点的预览版本，适合测试、体验和收集反馈。
+这是一个 **预览测试版（Pre-release）**。
 
----
+AI Workbench 不是一个单纯的标注工具，而是一个正在演进中的 **本地视觉数据工作台**。  
+当前版本重点面向 **YOLO 系列目标检测工作流**，用于本地图像数据整理、标注修正、自动识别、数据集导出、训练前准备，以及 OpenClaw-assisted 分析扩展。
 
-## Latest Recommended Release / 当前推荐版本
+本轮发布已经完成：
 
-- **Recommended:** `v0.3.0`
-- Please use the latest `v0.3.0` preview package from the Releases page.
-- Older preview packages are legacy builds and should not be preferred for new testing.
-
-- **当前推荐：** `v0.3.0`
-- 请从 Releases 页面优先下载最新的 `v0.3.0` 预览包。
-- 更早的预览包属于旧版本构建，不建议作为新的测试入口。
+- 普通用户预览包发布
+- 进阶源码包发布
+- Windows 10 虚拟机验证
+- Windows 11 本地主机验证
+- 主界面启动验证
+- 本地运行环境初始化验证
+- OpenClaw 联动入口整理
+- 发布包隐私与开发痕迹清理
 
 ---
 
-## Quick Start for Most Users / 普通用户快速开始
+## 项目定位
 
-1. Download the latest preview package from **Releases**.
-2. Extract the zip package to a local folder.
-3. Double-click `start_ui.bat`.
-4. Wait for the UI to launch.
-5. Open Settings and confirm your local paths before use.
+AI Workbench 当前更适合作为一个本地 GUI 工作台，用于：
 
-1. 从 **Releases** 下载最新预览版压缩包。
-2. 解压到本地文件夹。
-3. 双击 `start_ui.bat`。
-4. 等待界面启动。
-5. 使用前先进入设置页面确认本地路径。
+- 图像浏览与工作区管理
+- 类别设置与基础标注信息编辑
+- 自动识别与结果修正
+- 数据集导出
+- 训练前准备
+- OpenClaw 辅助分析入口
+- 后续训练可视化与 GPU 展示扩展
 
-### What you need / 你需要准备什么
+这意味着它当前不是一个“已经完成所有训练链路的最终平台”，而是一个：
 
-- Windows 10 or Windows 11
-- Python 3.10 recommended
-- A local folder where you can read and write files
-
-- Windows 10 或 Windows 11
-- 推荐 Python 3.10
-- 一个可正常读写的本地目录
+**已经跑通主链路，并正在向本地视觉数据工作台持续演进的预览基础版。**
 
 ---
 
-## Current Highlights / 当前亮点
+## 产品特性 / Product Features
 
-- Local-first desktop preview workflow
-- Structured settings pages
-- Path configuration for images, labels, models, outputs, and bad cases
-- One-click launcher for preview users
-- Bilingual project presentation
-- Early-stage workflow evaluation interface
+### 数据工作流能力
+- 图像浏览与工作区管理
+- 类别设置与基础标注信息编辑
+- 选中框微调、删除与编辑窗口
+- bad case 标记
+- duplicate 暂存与恢复
+- 批量重命名
+- 数据集导出入口
+- 工作区备份与恢复
 
-- 本地优先的桌面预览工作流
-- 结构化设置页面
-- 支持图片、标签、模型、输出和 bad cases 路径配置
-- 面向预览用户的一键启动入口
-- 中英双语项目展示
-- 面向早期评估的工作流界面
+### 自动识别能力
+- 已集成 YOLO 自动识别入口
+- 当前推理链路基于 Ultralytics YOLO
+- 支持加载本地模型进行图像目标检测
+- 自动识别结果可直接进入标注修正流程
 
----
+### OpenClaw 辅助分析能力
+- 已接入 OpenClaw 联动入口
+- 可作为本地视觉工作流中的 AI 辅助分析扩展
+- OpenClaw 属于可选增强功能，不影响主程序基础使用
 
-## UI Preview / 界面预览
+### 模型与训练方向
+- 当前版本重点面向 **YOLO 系列目标检测工作流**
+- 在本轮开发与测试中，已实际验证过 **YOLO26** 与 **YOLOv8** 相关流程
+- 当前平台更适合作为图像数据整理、标注修正、自动识别与训练前准备的本地工作台
+- 当前版本已提供训练窗口基础结构，并预留训练状态、Epoch、Loss、best.pt 与日志显示区域
+- 后续版本将继续扩展训练动态可视化、GPU 相关展示与更完整的训练工作流支持
 
-### 01 - Main UI / 主界面
-![Main UI](assets/screenshots/01_main_ui.png)
-
-### 02 - Path Settings / 路径设置
-![Path Settings](assets/screenshots/02_path_settings.png)
-
-### 03 - Inference Settings / 推理设置
-![Inference Settings](assets/screenshots/03_inference_settings.png)
-
-### 04 - Training Settings / 训练设置
-![Training Settings](assets/screenshots/04_training_settings.png)
-
-### 05 - Language Settings / 语言设置
-![Language Settings](assets/screenshots/05_language_settings.png)
-
----
-
-## Current Scope / 当前范围
-
-This preview currently focuses on:
-- UI structure and navigation
-- Local path configuration
-- Preview-stage launcher experience
-- Workflow direction presentation
-
-当前版本主要聚焦于：
-- 界面结构与导航
-- 本地路径配置
-- 预览版启动体验
-- 工作流方向展示
+### 平台化与扩展能力
+- 提供普通用户预览包
+- 提供进阶源码包
+- 提供中英文界面基础
+- 为后续插件扩展与训练能力演进预留结构
 
 ---
 
-## Not Fully Included Yet / 当前尚未完全开放
+## OpenClaw 方向 / OpenClaw Direction
 
-The following areas are still in progress:
-- Full training execution pipeline
-- Training curve visualization
-- GPU monitoring and advanced hardware diagnostics
-- Full plugin architecture
-- Deeper automation workflows
+AI Workbench v0.3.0 Preview 已经接入 OpenClaw 联动入口。  
+当前版本中，OpenClaw 属于可选增强功能，主要用于为本地视觉数据工作流提供 AI 分析入口。
 
-以下内容仍在持续开发中：
-- 完整训练执行链路
-- 训练曲线可视化
-- GPU 监控与更深入的硬件诊断
-- 完整插件架构
-- 更深层的自动化工作流
+我们希望后续版本逐步把 OpenClaw 从“单次分析入口”扩展为“视觉数据工作流助手”，用于：
+
+- 当前图片分析
+- 标注结果辅助检查
+- bad case 辅助判断
+- duplicate 样本辅助识别
+- 数据整理与训练前准备说明
+- 后续训练日志与结果解释
+
+这意味着 AI Workbench 不只是一个传统标注工具，也在朝 **OpenClaw-assisted visual workflow GUI** 的方向持续演进。
 
 ---
 
-## Advanced Setup / 进阶手动启动
+## 适合谁
 
-For advanced users who want to run the project manually:
+### 普通用户
+适合先体验界面、基础流程、懒人包安装与本地运行链路。
+
+### 进阶用户
+适合手动安装 Python / Conda，阅读源码，调试与扩展工作流。
+
+### OpenClaw 用户
+适合已经在本机使用 OpenClaw，希望体验 GUI + AI 分析入口联动的人。
+
+---
+
+## 普通用户教程
+
+### Step 1
+下载普通用户预览包
+
+### 说明
+下载以下文件：
+
+- `AI_Workbench_v0.3.0_preview_win_x64.zip`
+
+### Step 2
+解压到本地独立目录
+
+### 说明
+不要直接在压缩包内运行。  
+建议先完整解压，再运行其中的启动脚本。
+
+### Step 3
+双击 `start_workbench.bat`
+
+### 说明
+首次运行会自动准备本地运行环境，可能持续数分钟。
+
+### Step 4
+按提示继续安装
+
+### 说明
+某些纯净 Windows 环境下，首次下载运行环境时可能出现 SSL 提示。  
+按照提示继续即可。
+
+### Step 5
+等待主界面启动
+
+### 说明
+某些阶段窗口可能短时间无新输出，请耐心等待，不要频繁关闭窗口。
+
+### Step 6（可选）
+使用 OpenClaw 联动分析功能
+
+### 说明
+OpenClaw 属于可选增强功能。  
+未启动 OpenClaw 时，主程序仍可正常打开和使用基础功能。
+
+---
+
+## 进阶用户教程
+
+### Step 1
+安装 Miniconda 或 Anaconda
+
+### 说明
+推荐使用 Conda 管理独立环境，避免与已有项目依赖冲突。
+
+### Step 2
+创建独立环境
 
 ```bash
-conda create -n ai_workbench python=3.10 -y
-conda activate ai_workbench
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python main.py
-```
-
-适合希望手动运行项目的进阶用户：
-
-```bash
-conda create -n ai_workbench python=3.10 -y
-conda activate ai_workbench
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python main.py
-```
-
----
-
-## Recommended Environment / 推荐环境
-
-- OS: Windows 10 / Windows 11
-- Python: 3.10 recommended
-- NVIDIA GPU recommended but not required for preview
-- Local writable project directory
-
-- 系统：Windows 10 / Windows 11
-- Python：推荐 3.10
-- 预览体验推荐 NVIDIA GPU，但不是必须
-- 需要本地可写项目目录
-
----
-
-## Release Notes / 发布说明
-
-This repository is being cleaned and structured for a more formal preview release workflow.
-Current direction: clearer documentation, cleaner repository layout, safer release packaging.
-
-此仓库正在朝更正式的预览发布流程进行整理。
-当前方向：更清晰的说明文档、更干净的仓库结构、更稳妥的发布包装。
-
----
-
-## Download / 下载
-
-Please use the latest package from the repository Releases page.
-请从仓库 Releases 页面下载最新发布包。
+conda create -n yolo python=3.10 -y
+conda activate yolo
