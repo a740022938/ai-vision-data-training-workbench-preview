@@ -171,5 +171,18 @@ Current direction: clearer documentation, cleaner repository layout, safer relea
 
 ## Download / 下载
 
-Please use the latest package from the repository Releases page.
-请从仓库 Releases 页面下载最新发布包。
+- Please use the latest package from the repository Releases page.
+- Current recommended release: `v0.3.0`
+- If older preview packages still appear in your browser cache, refresh the page and choose the newest release.
+
+- 请从仓库 Releases 页面下载最新发布包。
+- 当前推荐版本：`v0.3.0`
+- 如果浏览器里还显示旧预览包，请刷新页面后选择最新版本。
+
+---
+
+## Feedback / 反馈
+
+If you encounter startup problems, missing dependencies, path configuration issues, or UI-related errors during preview testing, please open an issue or record the problem details for the next iteration.
+
+如果你在预览测试中遇到启动失败、依赖缺失、路径配置问题或界面相关错误，建议提交 issue 或记录问题细节，便于下一轮迭代修复。
