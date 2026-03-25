@@ -12,6 +12,18 @@ A local-first Windows workbench preview for visual dataset review, annotation wo
 
 ---
 
+## Latest Recommended Release / 当前推荐版本
+
+- **Recommended:** `v0.3.0`
+- Please use the latest `v0.3.0` preview package from the Releases page.
+- Older preview packages are legacy builds and should not be preferred for new testing.
+
+- **当前推荐：** `v0.3.0`
+- 请从 Releases 页面优先下载最新的 `v0.3.0` 预览包。
+- 更早的预览包属于旧版本构建，不建议作为新的测试入口。
+
+---
+
 ## Quick Start for Most Users / 普通用户快速开始
 
 1. Download the latest preview package from **Releases**.
