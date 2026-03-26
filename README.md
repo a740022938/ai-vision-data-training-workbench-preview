@@ -125,7 +125,7 @@ AI Workbench v0.3.0 Preview 已经接入 OpenClaw 联动入口。
 建议先完整解压，再运行其中的启动脚本。
 
 ### Step 3
-双击 `start_workbench.bat`
+双击 `start_ui.bat`
 
 ### 说明
 首次运行会自动准备本地运行环境，可能持续数分钟。

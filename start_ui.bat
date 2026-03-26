@@ -7,7 +7,7 @@ title AI Vision Data and Training Workbench Preview
 echo ================================================
 echo AI Vision Data and Training Workbench Preview
 echo 一键启动预览版界面
- echo ================================================
+echo ================================================
 echo.
 echo [1/3] 正在检查 Python...
 where python >nul 2>nul
@@ -32,8 +32,8 @@ if not exist "logs" mkdir "logs"
 
 echo [3/3] 正在启动工作台...
 echo 首次启动如果较慢，属于正常现象。
-echo 如果启动失败，请查看：
-echo C:\AI_Workbench\logs\startup_error.log
+echo 如果启动失败，请查看当前目录下的 logs 文件夹。
+echo 示例日志路径：%CD%\logs\startup_error.log
 echo.
 python main.py
 set ERR=%ERRORLEVEL%
@@ -41,7 +41,7 @@ set ERR=%ERRORLEVEL%
 echo.
 if not "%ERR%"=="0" (
     echo 程序退出代码：%ERR%
-    echo 启动可能失败了，请检查日志。
+    echo 启动可能失败了，请检查当前目录下的 logs 文件夹。
     pause
     exit /b %ERR%
 )
